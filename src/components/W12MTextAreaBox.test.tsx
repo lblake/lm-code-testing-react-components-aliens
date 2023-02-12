@@ -37,7 +37,7 @@ test("textareabox value on Onchange test", () => {
     onChange: jest.fn(),
   };
   render(<W12MTextAreaBox {...TextAreaBoxProps} />);
-  const textareaBox = screen.getByTestId("reasonForSparing");
+  const textareaBox = screen.getByTestId("reasonForSparing")as HTMLInputElement;
   fireEvent.change(textareaBox, {
     target: { value: "genius is by hardwork" },
   });

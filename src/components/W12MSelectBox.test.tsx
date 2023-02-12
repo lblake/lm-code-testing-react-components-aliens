@@ -34,7 +34,7 @@ test('selectbox value on Onchange test', () => {
     onChange: jest.fn(),
   };
   render(<W12MSelectBox {...SelectBoxProps} />);
-  const selectBox = screen.getByTestId('whatIs2Add2');
+  const selectBox = screen.getByTestId('whatIs2Add2') as HTMLInputElement;
   fireEvent.change(selectBox, {
     target: { value: 'Not 4' },
   });

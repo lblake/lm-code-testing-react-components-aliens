@@ -39,7 +39,7 @@ test('textbox value on Onchange test', () => {
     onChange: jest.fn(),
   };
   render(<W12MTextBox {...TextBoxProps} />);
-  const textBox = screen.getByTestId('speciesName');
+  const textBox = screen.getByTestId('speciesName')as HTMLInputElement;
   fireEvent.change(textBox, {
     target: { value: 'genius' },
   });
