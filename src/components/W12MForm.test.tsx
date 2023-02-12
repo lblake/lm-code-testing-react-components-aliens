@@ -24,6 +24,16 @@ test("form render test", () => {
     errMessage:
       "Error - Please follow the rules : Enter only alphabets or numbers, atleast 2 characters and maximum 49 characters!",
   };
+  const textBox_test_numberOfBeings = {
+    id: "numberOfBeings",
+    title: "Number of beings",
+    min: "10",
+    max: "20",
+    pattern: "^[0-9]+$",
+    displayError: false,
+    errMessage:
+      "Error - Please follow the rules : Enter only numbers, atleast 10 digit number!",
+  };
 
   const selectBox_test_whatIs2Add2 = {
     id: "whatIs2Add2",
@@ -244,7 +254,7 @@ test("invalid pattern test on one of a random field", () => {
 
   expect(
     screen.getAllByTestId("errormessage")[2]
-  ).toBeVisible(); /*Error on field numberofbeings is visible*/
+  ).toBeVisible(); 
 });
 
 test("invalid pattern test on all of the 5 fields", () => {

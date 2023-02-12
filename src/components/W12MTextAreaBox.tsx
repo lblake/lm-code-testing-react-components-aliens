@@ -3,16 +3,19 @@ import TextAreaStructure from "../data/textarea-struct";
 interface TextAreaBoxProps {
   textareaObject: TextAreaStructure;
   onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  index:number;
 }
 
 const TextAreaBox: React.FC<TextAreaBoxProps> = ({
   textareaObject,
   onChange,
+  index,
+  
 }) => {
   return (
     <div>
       <label className="form-control" htmlFor={textareaObject.id}>
-        {textareaObject.title}
+        {textareaObject.title} key={index}
       </label>
       <p>
         <textarea

@@ -41,7 +41,7 @@ test("textareabox value on Onchange test", () => {
   fireEvent.change(textareaBox, {
     target: { value: "genius is by hardwork" },
   });
-  expect(textareaBox.textContent).toBe("genius is by hardwork");
+  expect(textareaBox.value).toBe("genius is by hardwork");
 });
 
 test("textareabox errormessage render test", () => {

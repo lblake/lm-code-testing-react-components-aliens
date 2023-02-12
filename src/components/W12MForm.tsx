@@ -136,13 +136,14 @@ const W12MForm: React.FC<W12MFormProps> = ({
   return (
     <form onSubmit={handleSubmit} data-testid='w12MForm' className='w12MForm'>
       <W12MHeader />
-      {allTextBoxes.map((textbox) => (
-        <W12MTextBox textboxObject={textbox} onChange={onChangeTextBox} />
+      {allTextBoxes.map((textbox,index) => (
+        <W12MTextBox textboxObject={textbox} onChange={onChangeTextBox} key={index}/>
       ))}
-      {allSelectBoxes.map((selectbox) => (
+      {allSelectBoxes.map((selectbox,index) => (
         <W12MSelectBox
           selectboxObject={selectbox}
           onChange={onChangeSelectBox}
+          key={index}
         />
       ))}
       {allTextAreaBoxes.map((textareabox) => (

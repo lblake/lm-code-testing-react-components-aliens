@@ -16,7 +16,7 @@ const SelectBox: React.FC<SelectBoxProps> = ({ selectboxObject, onChange }) => {
         data-testid={selectboxObject.id}
         onChange={onChange}
       >
-        <option selected>{selectboxObject.option1}</option>
+        <option >{selectboxObject.option1}</option>
         <option>{selectboxObject.option2}</option>
         required
       </select>
