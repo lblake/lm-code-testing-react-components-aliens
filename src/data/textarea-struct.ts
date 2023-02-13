@@ -5,4 +5,5 @@ export default interface TextAreaStructure {
     max: number;
     displayError: boolean;
     errMessage: string;
+    
 }

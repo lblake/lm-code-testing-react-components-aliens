@@ -1,25 +1,22 @@
-import TextAreaStructure from "../data/textarea-struct";
+import TextAreaStructure from '../data/textarea-struct';
 
 interface TextAreaBoxProps {
   textareaObject: TextAreaStructure;
   onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  index:number;
 }
 
 const TextAreaBox: React.FC<TextAreaBoxProps> = ({
   textareaObject,
   onChange,
-  index,
-  
 }) => {
   return (
     <div>
-      <label className="form-control" htmlFor={textareaObject.id}>
-        {textareaObject.title} key={index}
+      <label className='form-control' htmlFor={textareaObject.id}>
+        {textareaObject.title}
       </label>
       <p>
         <textarea
-          className="form-control"
+          className='form-control'
           data-testid={textareaObject.id}
           minLength={textareaObject.min}
           maxLength={textareaObject.max}
@@ -28,9 +25,9 @@ const TextAreaBox: React.FC<TextAreaBoxProps> = ({
         ></textarea>
       </p>
       <p
-        data-testid="errormessage"
+        data-testid='errormessage'
         hidden={!textareaObject.displayError}
-        className="error"
+        className='error'
       >
         {textareaObject.errMessage}
       </p>

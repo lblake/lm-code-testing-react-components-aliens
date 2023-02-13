@@ -150,6 +150,7 @@ const W12MForm: React.FC<W12MFormProps> = ({
         <W12MTextAreaBox
           textareaObject={textareabox}
           onChange={onChangeTextAreaBox}
+          
         />
       ))}
       <input
